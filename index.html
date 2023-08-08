@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="player block" id="audio">
+      <p class="music-name"></p>
+
+      <div class="timecontrol">
+
+        <div class="timeline">
+          <div class="progress"></div>
+        </div>
+
+        <div class="timer">
+          <div class="current">0:00</div>
+          <div class="divider"> / </div>
+          <div class="length"></div>
+        </div>
+
+      </div>
+
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+
+
+      <div class="volume-container">
+        <div class="volume-button">🔈</div>
+
+        <div class="volume-slider">
+          <div class="volume-percentage"></div>
+        </div>
+      </div>
+
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather block" id="weather">
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time block" id="time"></time>
+    <date class="date block" id="date"></date>
+    <div class="greeting-container block" id="greeting">
+      <span class="greeting"></span>
+      <input type="text" class="name" />
+    </div>
+  </main>
+  <footer class="footer">
+    <img class="settings-btn" src="./assets/img/settings.svg" width="30"></img>
+
+    <div class="block quote-block" id="quote">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+
+    <div class="todolist block" id="todolist">
+      <form class="todo-form" novalidate id="info-form" action="/apply/" method="POST">
+        <label>
+          <input class="input-todo js-form" type="text" name="name" id="name" required autofocus>
+        </label>
+      </form>
+
+      <ul class="todolist-list"></ul>
+    </div>
+  </footer>
+  <div class="settings-menu">
+    <p class="settings-menu__close">X</p>
+    <div class="lang-btns">
+      <p class="lang-settings"></p>
+      <p class="lang-btn lang-ru">RU</p>
+      <p class="lang-btn lang-en">EN</p>
+    </div>
+    <div class="sourse-btns">
+      <p class="sourse-settings"></p>
+      <p class="sourse-btn sourse-git">GitHub</p>
+      <p class="sourse-btn sourse-api">API</p>
+    </div>
+    <form class="tegAPI">
+      <label class="tegAPI-label"></label>
+      <input type="text" class="log"></input>
+    </form>
+    <p class="settings-display-title"></p>
+    <div class="settings-display">
+      <div>
+        <input class="settings-display-block" type="checkbox" id="time" name="time">
+        <label class="label-time" for="time">Time</label>
+      </div>
+      <div>
+        <input class="settings-display-block" type="checkbox" id="date" name="date">
+        <label class="label-date" for="date"></label>
+      </div>
+      <div>
+        <input class="settings-display-block" type="checkbox" id="greeting" name="greeting">
+        <label class="label-greeting" for="greeting">Greeting</label>
+      </div>
+      <div>
+        <input class="settings-display-block" type="checkbox" id="quote" name="quote">
+        <label class="label-quote" for="quote">Quote</label>
+      </div>
+      <div>
+        <input class="settings-display-block" type="checkbox" id="weather" name="weather">
+        <label class="label-weather" for="weather">Weather</label>
+      </div>
+      <div>
+        <input class="settings-display-block" type="checkbox" id="audio" name="audio">
+        <label class="label-audio" for="audio">Audio</label>
+      </div>
+      <div>
+        <input class="settings-display-block" type="checkbox" id="todolist" name="todolist">
+        <label class="label-todolist" for="todolist">To-do list</label>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
